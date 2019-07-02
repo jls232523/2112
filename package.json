@@ -7,6 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node speaker_service.js"
   },
+  "engines": {
+  "node": "10.15.1",
+  "npm": "6.4.1"
+  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jls232523/2112.git"
@@ -19,6 +24,7 @@
   "homepage": "https://github.com/jls232523/2112#readme",
   "dependencies": {
     "fs": "0.0.1-security",
+    "express": "^4.16.4",
     "requirejs": "^2.3.6"
   }
 }
