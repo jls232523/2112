@@ -18,4 +18,4 @@ let name = rLines[rand].split(",")[0];
 let x = rand;
 res.send(name);
 });
-app.listen(3000);
+app.listen(process.env.PORT);
