@@ -14,10 +14,15 @@ let word = "josh";
     document.getElementById("button").onclick = speak;
     document.getElementById("spell").onclick = spell;
     document.getElementById("show").onclick = show;
+    document.getElementById("repeat").onclick = repeat;
+
   };
 function show(){
   document.getElementById("word").innerHTML = word;
 
+}
+function repeat(){
+  responsiveVoice.speak(word, "US English Female");
 }
 function spell(){
   for(let i=0; i<word.length;i++){
