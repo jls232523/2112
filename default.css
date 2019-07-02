@@ -1,0 +1,29 @@
+body{
+  background: #00653b;
+  color: #ffffff;
+  text-align: center;
+}
+button{
+  background: blue;
+  border-radius: 5px;
+  color: white;
+  height: 50px;
+}
+h1,p{
+  font-family: cursive;
+  font-size: 60pt;
+}
+p{
+  font-size: 32pt;
+}
+#flex{
+  display: flex;
+  flex-direction: column;
+}
+img{
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}

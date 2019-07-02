@@ -1,24 +1,21 @@
-
-let fs = require("fs");
+"use strict";
 const express = require("express");
 const app = express();
 const fs = require("fs");
 
 app.use(express.static('public'));
 console.log('web service started');
-app.use(function(req, res, next) {//for posts
-   res.header("Access-Control-Allow-Origin", "*");
-   res.header("Access-Control-Allow-Headers",
-              "Origin, X-Requested-With, Content-Type, Accept");
-});
+
 app.get('/', function (req, res) {
-	res.header("Access-Control-Allow-Origin", "*");
+res.header("Access-Control-Allow-Origin", "*");
+let mode = req.query.mode;
+console.log(mode);
 let file = fs.readFileSync("names/names.txt", 'utf8');
 let rLines = file.split("\n");
-let rand = MATH.random() * rLines.length;
+let rand = Math.floor(Math.random() * rLines.length);
 console.log(rand);
-for(let i=0; i<rLines.length;i++){
-
-}
-}
+let name = rLines[rand].split(",")[0];
+let x = rand;
+res.send(name);
+});
 app.listen(3000);

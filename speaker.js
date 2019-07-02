@@ -8,27 +8,40 @@ learn how to type in a fun way.
 
 (function() {
   "use strict";
-
+let word = "josh";
   /*** on load for browser opening***/
   window.onload = function() {
     document.getElementById("button").onclick = speak;
+    document.getElementById("spell").onclick = spell;
+    document.getElementById("show").onclick = show;
   };
+function show(){
+  document.getElementById("word").innerHTML = word;
+
+}
+function spell(){
+  for(let i=0; i<word.length;i++){
+    responsiveVoice.speak(word[i], "US English Female");
+    setTimeout(function () {
+
+    }, 150);
+  }
+}
 function speak(){
-  let dictUrl = "https://localhost:3000";
+  document.getElementById("word").innerHTML = "";
+  let dictUrl = "http://localhost:3000/?mode=users";
   fetch(dictUrl)//book url request
   .then(checkStatus)
   .then(function(responseText) {
-    let json = JSON.parse(responseText);
-    for(let i = 0; i < json.dictionary.length; i++){
-      unusedWords.push(json.dictionary[i].word);
-    }
+    word = responseText;
+    responsiveVoice.speak(word, "US English Female");
   })
   .catch(function(error) {
     console.log(error);
   });
-  responsiveVoice.speak("hello world", "UK English Male");
 }
 function checkStatus(response) {
+  console.log(response);
   if (response.status >= 200 && response.status < 300) {
     return response.text();
   } else {
