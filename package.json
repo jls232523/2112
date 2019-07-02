@@ -1,0 +1,23 @@
+{
+  "name": "2112",
+  "version": "1.0.0",
+  "description": "helper",
+  "main": "speaker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jls232523/2112.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jls232523/2112/issues"
+  },
+  "homepage": "https://github.com/jls232523/2112#readme",
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "requirejs": "^2.3.6"
+  }
+}
