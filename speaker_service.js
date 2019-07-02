@@ -6,7 +6,7 @@ const fs = require("fs");
 app.use(express.static('public'));
 console.log('web service started');
 
-app.get('/', function (req, res) {
+app.get('', function (req, res) {
 res.header("Access-Control-Allow-Origin", "*");
 let mode = req.query.mode;
 console.log(mode);
