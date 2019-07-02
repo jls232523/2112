@@ -29,7 +29,7 @@ function spell(){
 }
 function speak(){
   document.getElementById("word").innerHTML = "";
-  let dictUrl = "lj2112.herokuapp.com/?mode=user";
+  let dictUrl = "https://lj2112.herokuapp.com/?mode=user";
   fetch(dictUrl)//book url request
   .then(checkStatus)
   .then(function(responseText) {
