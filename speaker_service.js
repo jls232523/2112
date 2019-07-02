@@ -10,7 +10,7 @@ app.get('', function (req, res) {
 res.header("Access-Control-Allow-Origin", "*");
 let mode = req.query.mode;
 console.log(mode);
-let file = fs.readFileSync("names/names.txt", 'utf8');
+let file = fs.readFileSync("names.txt", 'utf8');
 let rLines = file.split("\n");
 let rand = Math.floor(Math.random() * rLines.length);
 console.log(rand);
