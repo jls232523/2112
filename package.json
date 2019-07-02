@@ -4,7 +4,8 @@
   "description": "helper",
   "main": "speaker_service.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node speaker_service.js"
   },
   "repository": {
     "type": "git",
